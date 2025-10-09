@@ -198,28 +198,34 @@
 
 
 #single aside.aboutImg {
-    display: flex; /* Enable Flexbox */
-    align-items: flex-start; /* Align items at the top */
-    gap: 20px; /* Add space between the image and text */
-    padding: 0.7rem 1rem;
+    display: flex;
+    flex-direction: row; /* text left, image right */
+    align-items: center; /* vertically align */
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: nowrap; /* ensure they stay side-by-side */
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 #single aside.aboutImg img {
-    border-radius: 1.5rem !important;
-    max-width: 100%; /* Ensure the image doesn't overflow */
-    flex-shrink: 0; /* Prevent the image from shrinking */
+    width: 280px;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    object-fit: cover;
 }
 
 #single aside.aboutImg .aboutImg-content {
-    flex: 1; /* Allow the text to take up remaining space */
-    margin-bottom: 1em;
-    opacity: 0.9;
+    flex: 1;
+    line-height: 1.6em;
 }
 
 /* Responsive layout for mobile devices */
 @media (max-width: 768px) {
     #single aside.aboutImg {
         flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: left;
     }
 
     #single aside.aboutImg img {

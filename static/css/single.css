@@ -320,3 +320,57 @@
 }
 
 /* Singlepage scroll progress end */
+/* ===== About Page Layout (Compact Version) ===== */
+.about-section {
+  display: flex;
+  align-items: flex-start; /* text aligns with top of image */
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 0.5rem; /* small gap under the header */
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1 1 50%;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0; /* remove default top spacing */
+}
+
+.about-text p {
+  margin-top: 0; /* ensure no paragraph gap under header */
+}
+
+.about-image {
+  flex: 0 0 35%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-top: 0; /* remove any top offset */
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-image {
+    justify-content: center;
+  }
+
+  .about-image img {
+    max-width: 200px;
+    margin: 0 auto 1rem;
+  }
+}
+
